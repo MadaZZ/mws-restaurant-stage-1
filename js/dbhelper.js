@@ -169,9 +169,8 @@ class DBHelper {
   
   }
   
-  /*
-   * Service Worker Register.
-   */
+  
+  // Service Worker Register.
   if (navigator.serviceWorker) {
     navigator.serviceWorker.register('./serviceWorker.js')
       .then(function (registration) {
