@@ -3,8 +3,8 @@ var CACHE_FILES = [
 	'/',
 	'/index.html',
 	'/restaurant.html',
-    '/css/styles.css',
-    '/js/dbhelper.js',
+	'/css/styles.css',
+	'/js/dbhelper.js',
 	'/js/main.js',
 	'/data/restaurants.json',
 	'/js/restaurant_info.js',
@@ -45,13 +45,13 @@ self.addEventListener('install', function (event) {
 });
 
 self.addEventListener('activate', function (event) {
-    event.waitUntil(
-        caches.keys().then(function(keys){
-            return Promise.all(keys.map(function(key, i){
-                if(key !== CACHE_VERSION){
-                    return caches.delete(keys[i]);
-                }
-            }));
-        })
-    );
+	event.waitUntil(
+		caches.keys().then(function (keys) {
+			return Promise.all(keys.map(function (key, i) {
+				if (key !== CACHE_VERSION) {
+					return caches.delete(keys[i]);
+				}
+			}));
+		})
+	);
 });
